@@ -7,8 +7,13 @@ import { DOMParser } from 'xmldom';
 
 const app = express();
 
+let corsOptions = {
+  origin: 'http://localhost:3000/',
+  credentials: true,
+};
+
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.post('/', (req, res) => {
   const { body } = req;
