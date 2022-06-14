@@ -14,10 +14,6 @@ let corsOptions = {
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
-app.get('/good', (req, res) => {
-  res.send('hello');
-});
-
 app.post('/', (req, res) => {
   const { body } = req;
   const { url } = body;
