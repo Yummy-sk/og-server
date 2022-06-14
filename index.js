@@ -9,7 +9,6 @@ const app = express();
 
 let corsOptions = {
   origin: '*',
-  credentials: true,
 };
 
 app.use(bodyParser.json());
