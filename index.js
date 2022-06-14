@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
   parseUrl(url).then(result => res.json(result));
 });
 
-app.listen(8080, () => console.log('Server started'));
+app.listen(process.env.PORT || 8080, () => console.log('Server started'));
 
 const xpaths = {
   title: 'string(//meta[@property="og:title"]/@content)',
